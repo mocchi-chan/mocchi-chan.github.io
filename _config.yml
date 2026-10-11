@@ -11,7 +11,7 @@ baseurl: ""
 repository: "mocchi-chan/mocchi-chan.github.io"
 
 author:
-  avatar: "profile.jpg"
+  avatar: "profile.png"
   name: "Shuyu Zhang"
   pronouns: "she/her"
   bio: "Ph.D. Student in EECS"
