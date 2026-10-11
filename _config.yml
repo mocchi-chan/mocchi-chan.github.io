@@ -14,9 +14,9 @@ title_separator: "-"
 name: &name "Shuyu Zhang"
 description: &description "Power delivery for AI infrastructure"
 
-url: "https://shuyu-zhang.github.io"
+url: "https://mocchi-chan.github.io"
 baseurl: ""
-repository: "mocchi-chan/shuyu-zhang.github.io"
+repository: "mocchi-chan/mocchi-chan.github.io"
 
 author:
   avatar: "profile.jpg"
@@ -25,11 +25,13 @@ author:
   bio: "Ph.D. Student in EECS"
   location: "Berkeley, CA"
   employer: "University of California, Berkeley"
+  uri: "https://mocchi-chan.github.io"
   email: "shuyu-zhang@berkeley.edu"
 
-  googlescholar: "https://scholar.google.com/citations?user=rHK_wkAAAAAJ&hl=en"
-  # github: "mocchi-chan"
-  linkedin: "https://www.linkedin.com/in/shuyu-zhang-792aa2428/"
+  googlescholar: "https://scholar.google.com/citations?user=rHK_wkAAAAAJ"
+  github: "mocchi-chan"
+  linkedin: "shuyu-zhang-792aa2428"
+
   # Academic websites
   academia         : # URL
   googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
