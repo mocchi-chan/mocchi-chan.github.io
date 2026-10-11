@@ -37,3 +37,10 @@
     "layout/sidebar",
     "layout/json_cv"
 ;
+/* Square author portrait */
+.author__avatar img {
+  border-radius: 4px !important;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+}
