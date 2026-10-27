@@ -1,0 +1,27 @@
+{% assign publication = include.publication %}
+{% assign fulltext_url = publication.paperurl | default: "" %}
+{% if publication.local_pdf %}
+  {% assign local_pdf_file = site.static_files | where: 'path', publication.local_pdf | first %}
+  {% if local_pdf_file %}
+    {% assign fulltext_url = local_pdf_file.path | relative_url %}
+  {% endif %}
+{% endif %}
+{% assign title_url = fulltext_url | default: publication.publisher_url %}
+
+<div class="publication-entry" data-author-position="{{ publication.author_position }}">
+  {% if include.show_title != false %}
+  <h3 class="publication-title">{% if publication.links == false %}{{ publication.title | escape }}{% else %}<a href="{{ title_url | escape }}">{{ publication.title | escape }}</a>{% endif %}</h3>
+  {% endif %}
+  <p class="publication-authors">{% for author in publication.authors %}{% unless forloop.first %}, {% endunless %}{% if author == site.author.name %}<strong>{{ author | escape }}</strong>{% else %}{{ author | escape }}{% endif %}{% endfor %}</p>
+  <p class="publication-venue"><em>{{ publication.venue | escape }}</em>{% if publication.volume %}, vol. {{ publication.volume }}, no. {{ publication.issue }}{% endif %}, pp. {{ publication.pages | replace: '-', '–' }}, {{ publication.year }}.</p>
+  {% if publication.early_access_year %}
+  <p class="publication-note">Early access: {{ publication.early_access_year }}.</p>
+  {% endif %}
+  {% if publication.links != false %}
+  <p class="publication-links">
+    {% if fulltext_url != "" %}<a href="{{ fulltext_url | escape }}">Paper (PDF)</a>{% endif %}
+    <a href="https://doi.org/{{ publication.doi | escape }}">DOI</a>
+    <a href="{{ publication.scholar_url | escape }}">Google Scholar</a>
+  </p>
+  {% endif %}
+</div>

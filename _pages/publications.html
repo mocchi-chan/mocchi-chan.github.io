@@ -6,31 +6,29 @@ author_profile: true
 ---
 
 {% if site.author.googlescholar %}
-  <div class="wordwrap">Find my publications on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+<p>For the latest citation information, visit my <a href="{{ site.author.googlescholar }}">Google Scholar profile</a>.</p>
 {% endif %}
 
-{% include base_path %}
+{% assign publications = site.publications | sort: 'date' | reverse %}
+{% assign first_author_publications = publications | where: 'author_position', 1 %}
+{% if first_author_publications.size > 0 %}
+<h2 class="publication-section">First-Author Publications</h2>
+<ol class="publication-list" role="list">
+{% for publication in first_author_publications %}
+  <li>{% include publication-entry.html publication=publication %}</li>
+{% endfor %}
+</ol>
+{% endif %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
+{% assign other_publications = publications | where_exp: 'publication', 'publication.author_position != 1' %}
+{% for category in site.publication_category %}
+  {% assign category_publications = other_publications | where: 'category', category[0] %}
+  {% if category_publications.size > 0 %}
+    <h2 class="publication-section">Other {{ category[1].title }}</h2>
+    <ol class="publication-list" role="list">
+    {% for publication in category_publications %}
+      <li>{% include publication-entry.html publication=publication %}</li>
     {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
-
-
-
+    </ol>
+  {% endif %}
+{% endfor %}

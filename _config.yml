@@ -82,6 +82,7 @@ include:
   - files
 
 exclude:
+  - files/papers/README.md
   - AGENTS.md
   - README.md
   - scripts
