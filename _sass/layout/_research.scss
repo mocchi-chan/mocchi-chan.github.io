@@ -1,0 +1,57 @@
+/* Homepage research highlights, with optional research figures. */
+.research-highlights {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.research-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--global-border-color);
+  border-radius: 6px;
+  background: var(--global-bg-color);
+
+  > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border-bottom: 1px solid var(--global-border-color);
+  }
+
+  .research-card__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 1.25rem;
+  }
+
+  h3 {
+    margin: 0 0 0.75rem;
+    font-size: 1.05em;
+    line-height: 1.4;
+  }
+
+  p {
+    margin: 0 0 1rem;
+    font-size: 0.9em;
+    line-height: 1.65;
+  }
+
+  .research-card__meta {
+    margin: auto 0 0;
+    padding-top: 0.25rem;
+    font-size: 0.8em;
+    color: var(--global-text-color);
+  }
+}
+
+@media (max-width: 48em) {
+  .research-highlights {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

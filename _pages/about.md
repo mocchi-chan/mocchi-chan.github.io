@@ -20,10 +20,15 @@ My research focuses on **high-performance power delivery for AI infrastructure**
 <div class="research-highlights">
 
   <article class="research-card">
+    {% assign research_image = site.static_files | where: 'path', '/images/research/tlvr-highlight.jpg' | first %}
+    {% if research_image %}
     <img
-      src="/images/research/tlvr-highlight.jpg"
+      src="{{ '/images/research/tlvr-highlight.jpg' | relative_url }}"
       alt="Fast-transient trans-inductor voltage regulator research"
+      loading="lazy"
+      decoding="async"
     >
+    {% endif %}
     <div class="research-card__body">
       <h3>Fast-Transient Control of Trans-Inductor Voltage Regulators</h3>
       <p>
@@ -38,10 +43,15 @@ My research focuses on **high-performance power delivery for AI infrastructure**
   </article>
 
   <article class="research-card">
+    {% assign research_image = site.static_files | where: 'path', '/images/research/acll-highlight.jpg' | first %}
+    {% if research_image %}
     <img
-      src="/images/research/acll-highlight.jpg"
+      src="{{ '/images/research/acll-highlight.jpg' | relative_url }}"
       alt="AC load-line control for multiphase point-of-load converters"
+      loading="lazy"
+      decoding="async"
     >
+    {% endif %}
     <div class="research-card__body">
       <h3>AC Load-Line Control for AI Processor Power Delivery</h3>
       <p>

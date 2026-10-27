@@ -82,6 +82,15 @@ include:
   - files
 
 exclude:
+  - AGENTS.md
+  - README.md
+  - scripts
+  - markdown_generator
+  - talkmap.py
+  - talkmap
+  - talkmap.ipynb
+  - talkmap_out.ipynb
+  - docker-compose.yaml
   - "*.sublime-project"
   - "*.sublime-workspace"
   - .asset-cache
