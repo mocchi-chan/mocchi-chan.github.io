@@ -17,6 +17,7 @@
 }
 
 .publication-entry {
+  --publication-title-color: #002676;
   min-width: 0;
   padding: 1.1em 0 1.25em;
   border-bottom: 1px solid var(--global-border-color);
@@ -26,6 +27,20 @@
     margin: 0 0 0.45em;
     font-size: 1.05em;
     line-height: 1.45;
+    color: var(--publication-title-color);
+
+    a,
+    a:visited,
+    a:hover,
+    a:focus-visible {
+      color: var(--publication-title-color);
+      text-decoration: none;
+    }
+
+    a:focus-visible {
+      outline: 2px solid currentColor;
+      outline-offset: 3px;
+    }
   }
 
   .publication-authors,
@@ -44,4 +59,8 @@
     font-size: 0.82em;
     line-height: 1.6;
   }
+}
+
+html[data-theme="dark"] .publication-entry {
+  --publication-title-color: #9fd1ff;
 }

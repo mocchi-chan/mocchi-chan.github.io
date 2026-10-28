@@ -3,6 +3,14 @@ layout: archive
 title: "Publications"
 permalink: /publications/
 author_profile: true
+conference_order:
+  - /publication/apec-tlvr-cot-control/
+  - /publication/apec-series-capacitor-zero-bias-tlvr/
+  - /publication/apec-hsc-vrm-zvs/
+  - /publication/peas-vienna-spread-spectrum/
+  - /publication/peas-two-stage-hsc/
+  - /publication/ecce-hsc-vrm-multifunctional/
+  - /publication/icpe-vienna-common-mode/
 ---
 
 {% if site.author.googlescholar %}
@@ -10,21 +18,23 @@ author_profile: true
 {% endif %}
 
 {% assign publications = site.publications | sort: 'date' | reverse %}
-{% assign first_author_publications = publications | where: 'author_position', 1 %}
-{% if first_author_publications.size > 0 %}
-<h2 class="publication-section">First-Author Publications</h2>
-<ol class="publication-list" role="list">
-{% for publication in first_author_publications %}
-  <li>{% include publication-entry.html publication=publication %}</li>
-{% endfor %}
-</ol>
-{% endif %}
-
-{% assign other_publications = publications | where_exp: 'publication', 'publication.author_position != 1' %}
 {% for category in site.publication_category %}
-  {% assign category_publications = other_publications | where: 'category', category[0] %}
+  {% assign category_publications = publications | where: 'category', category[0] %}
+  {% if category[0] == 'conferences' %}
+    {% assign ordered_conferences = "" | split: ',' %}
+    {% assign remaining_conferences = category_publications %}
+    {% for conference_permalink in page.conference_order %}
+      {% assign selected_conference = remaining_conferences | where: 'permalink', conference_permalink %}
+      {% assign ordered_conferences = ordered_conferences | concat: selected_conference %}
+      {% assign remaining_conferences = remaining_conferences | where_exp: 'publication', 'publication.permalink != conference_permalink' %}
+    {% endfor %}
+    {% assign category_publications = ordered_conferences | concat: remaining_conferences %}
+    {% assign first_author_conferences = category_publications | where: 'author_position', 1 %}
+    {% assign other_conferences = category_publications | where_exp: 'publication', 'publication.author_position != 1' %}
+    {% assign category_publications = first_author_conferences | concat: other_conferences %}
+  {% endif %}
   {% if category_publications.size > 0 %}
-    <h2 class="publication-section">Other {{ category[1].title }}</h2>
+    <h2 class="publication-section">{{ category[1].title }}</h2>
     <ol class="publication-list" role="list">
     {% for publication in category_publications %}
       <li>{% include publication-entry.html publication=publication %}</li>

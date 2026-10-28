@@ -27,10 +27,10 @@ author:
 
 # Publication categories
 publication_category:
-  manuscripts:
-    title: "Journal Articles"
   conferences:
-    title: "Conference Papers"
+    title: "Conference Proceedings"
+  manuscripts:
+    title: "Journal Publications"
   patents:
     title: "Patent Applications"
 
