@@ -12,3 +12,12 @@
 html[data-theme="dark"] .cv-download a {
   color: #9fd1ff;
 }
+
+@media screen and (min-width: $sidebar-screen-min-width) {
+  #main:has(.cv-download) .sidebar {
+    position: static;
+    height: auto;
+    padding-top: 0;
+    overflow-y: visible;
+  }
+}
