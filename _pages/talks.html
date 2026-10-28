@@ -5,16 +5,21 @@ permalink: /talks/
 author_profile: true
 ---
 
-{% if site.talkmap_link == true %}
+<p class="presentations-intro">Details coming soon.</p>
 
-<p style="text-decoration:underline;"><a href="/talkmap.html">See a map of all the places I've given a talk!</a></p>
-
-{% endif %}
-
-{% for post in site.talks reversed %}
-  {% include archive-single-talk.html %}
-{% endfor %}
-
-{% if site.talks.size == 0 %}
-<p>Please <a href="mailto:{{ site.author.email }}">contact me</a> for information about presentations.</p>
-{% endif %}
+<div class="presentations">
+  {% for event in site.data.presentations %}
+  <section class="presentation-event" id="{{ event.id | escape }}" aria-labelledby="{{ event.id | escape }}-title">
+    <h2 class="presentation-event__title" id="{{ event.id | escape }}-title">{{ event.event | escape }}</h2>
+    <p class="presentation-event__meta"><time datetime="{{ event.date | escape }}">{{ event.date_label | escape }}</time> · {{ event.location | escape }}</p>
+    <ul class="presentation-list" role="list">
+      {% for presentation in event.presentations %}
+      <li class="presentation-entry">
+        <p class="presentation-entry__type">{{ presentation.type | escape }}</p>
+        <h3 class="presentation-entry__title">{{ presentation.title | escape }}</h3>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+</div>
