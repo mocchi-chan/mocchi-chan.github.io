@@ -21,7 +21,7 @@
     {% if research_publication %}
     <p class="research-item__authors">{% for author in research_publication.authors %}{% unless forloop.first %}, {% endunless %}{% if author == site.author.name %}<strong>{{ author | escape }}</strong>{% else %}{{ author | escape }}{% endif %}{% endfor %}</p>
     <p class="research-item__venue">IEEE APEC {{ research_publication.year }}</p>
-    <p class="research-item__links"><a href="{{ research_paper_url | escape }}">[Paper]</a><a href="https://doi.org/{{ research_publication.doi | escape }}">[DOI]</a></p>
+    <p class="research-item__links"><a href="{{ research_paper_url | escape }}">[Paper]</a><a href="https://doi.org/{{ research_publication.doi | escape }}">[DOI]</a>{% if research_item.slides_url %}<a href="{{ research_item.slides_url | relative_url | escape }}">[Slides]</a>{% endif %}</p>
     {% endif %}
     <p class="research-item__description">{{ research_item.description | escape }}</p>
   </div>
