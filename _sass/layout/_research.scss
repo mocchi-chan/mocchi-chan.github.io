@@ -1,5 +1,7 @@
 /* A vertical research feed: figures on the left, publication details on the right. */
 .page--home {
+  --home-accent-color: #002676;
+
   @include breakpoint($large) {
     padding-right: 0;
   }
@@ -144,4 +146,33 @@
     max-width: 100%;
     justify-self: center;
   }
+}
+
+.page--home .page__content {
+  h2 {
+    color: var(--home-accent-color);
+  }
+
+  h2,
+  hr {
+    border-color: #dbeaf0;
+    border-color: color-mix(in srgb, var(--global-base-color) 20%, var(--global-bg-color));
+  }
+
+  a,
+  a:visited,
+  a:hover,
+  a:focus-visible {
+    color: var(--home-accent-color);
+    text-decoration: none;
+  }
+
+  a:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+  }
+}
+
+html[data-theme="dark"] .page--home {
+  --home-accent-color: #9fd1ff;
 }
