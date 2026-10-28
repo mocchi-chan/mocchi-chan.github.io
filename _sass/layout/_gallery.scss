@@ -1,5 +1,30 @@
-.gallery-intro {
-  margin-bottom: 1.25rem;
+.gallery-content {
+  --gallery-accent-color: #002676;
+}
+
+.gallery-section {
+  margin: 1.25rem 0 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #dbeaf0;
+  border-bottom-color: color-mix(in srgb, var(--global-base-color) 20%, var(--global-bg-color));
+  color: var(--gallery-accent-color);
+  font-size: 1.15em;
+  line-height: 1.4;
+}
+
+.gallery-section--events {
+  margin-top: 2.25rem;
+}
+
+.gallery-project {
+  margin-bottom: 1.75rem;
+  min-width: 0;
+}
+
+.gallery-project__title {
+  margin: 0 0 0.75rem;
+  font-size: 0.95em;
+  line-height: 1.4;
 }
 
 .research-gallery {
@@ -55,6 +80,19 @@
     color: var(--global-text-color);
     font-size: 0.8em;
     line-height: 1.5;
+  }
+}
+
+.research-gallery--hardware .gallery-card__link {
+  background: #fff;
+}
+
+.research-gallery--single {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 640px;
+
+  .gallery-card__link {
+    aspect-ratio: 16 / 9;
   }
 }
 
@@ -128,4 +166,8 @@ body.gallery-viewer-open {
   .gallery-viewer {
     padding: 0.75rem;
   }
+}
+
+html[data-theme="dark"] .gallery-content {
+  --gallery-accent-color: #9fd1ff;
 }

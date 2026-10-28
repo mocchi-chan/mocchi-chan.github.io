@@ -1,0 +1,11 @@
+{% assign gallery_photo = include.photo %}
+{% assign gallery_caption = gallery_photo.caption %}
+{% if include.project_title %}
+  {% assign gallery_caption = include.project_title | append: ' — ' | append: gallery_photo.caption %}
+{% endif %}
+<figure class="gallery-card" id="{{ gallery_photo.id | escape }}">
+  <a class="gallery-card__link{% if gallery_photo.fit == 'contain' or include.contain %} gallery-card__link--contain{% endif %}" href="{{ gallery_photo.image | relative_url }}" data-gallery-photo data-caption="{{ gallery_caption | escape }}" data-alt="{{ gallery_photo.alt | escape }}" aria-label="View photo: {{ gallery_caption | escape }}" style="--gallery-object-position: {{ gallery_photo.position | default: '50% 50%' | escape }};">
+    <img src="{{ gallery_photo.thumbnail | relative_url }}" alt="{{ gallery_photo.alt | escape }}" width="{{ gallery_photo.width }}" height="{{ gallery_photo.height }}" loading="{{ include.loading | default: 'lazy' }}" decoding="async">
+  </a>
+  <figcaption>{{ gallery_photo.caption | escape }}</figcaption>
+</figure>

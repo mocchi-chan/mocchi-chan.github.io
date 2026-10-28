@@ -1,0 +1,71 @@
+- id: "tlvr-project"
+  title: "TLVR Project"
+  photos:
+    - id: "tlvr-setup"
+      caption: "6-phase TLVR setup"
+      alt: "Annotated six-phase TLVR test setup with FPGA controller, load bank, and hardware prototype"
+      thumbnail: "/images/gallery/hardware/tlvr-setup-thumb.webp"
+      image: "/images/gallery/hardware/tlvr-setup.webp"
+      width: 1100
+      height: 649
+
+- id: "scb-projects"
+  title: "SCB Projects"
+  photos:
+    - id: "scb-power-stage"
+      caption: "Power stage"
+      alt: "Top and bottom views of the series-capacitor buck power stage with component and dimension labels"
+      thumbnail: "/images/gallery/hardware/scb-power-stage-thumb.webp"
+      image: "/images/gallery/hardware/scb-power-stage.webp"
+      width: 1100
+      height: 570
+    - id: "scb-side-view"
+      caption: "Hardware side view"
+      alt: "Annotated series-capacitor buck hardware showing the power stage, sensing, compensator, and dynamic load"
+      thumbnail: "/images/gallery/hardware/scb-side-view-thumb.webp"
+      image: "/images/gallery/hardware/scb-side-view.webp"
+      width: 1100
+      height: 496
+    - id: "scb-48v-current-mode"
+      caption: "4-phase 48-V-to-1-V series-capacitor buck converter with current-mode control"
+      alt: "Red PCB prototype of a four-phase 48-V-to-1-V series-capacitor buck converter with current-mode control"
+      thumbnail: "/images/gallery/hardware/scb-48v-current-mode-thumb.webp"
+      image: "/images/gallery/hardware/scb-48v-current-mode.webp"
+      width: 1100
+      height: 786
+
+- id: "vrm-projects"
+  title: "High-Density Voltage Regulator Module (VRM) Projects"
+  photos:
+    - id: "vrm-3d-rendering"
+      caption: "3D rendering of the 240-A hybrid switched-capacitor VRM"
+      alt: "3D rendering of a 240-A hybrid switched-capacitor voltage regulator module with stacked PCBs and Coilcraft inductors"
+      thumbnail: "/images/gallery/hardware/vrm-3d-rendering-thumb.webp"
+      image: "/images/gallery/hardware/vrm-3d-rendering.webp"
+      width: 1100
+      height: 474
+    - id: "vrm-hardware-prototype"
+      caption: "Hardware prototype"
+      alt: "Hybrid switched-capacitor voltage regulator module hardware prototype with inductors and power terminals"
+      thumbnail: "/images/gallery/hardware/vrm-hardware-prototype-thumb.webp"
+      image: "/images/gallery/hardware/vrm-hardware-prototype.webp"
+      width: 1100
+      height: 733
+
+- id: "hust-high-voltage"
+  title: "High-Voltage Project at HUST"
+  photos:
+    - id: "hust-vienna-rectifier"
+      caption: "3-phase Vienna rectifier for electric vehicle (EV) applications"
+      alt: "Three-phase Vienna rectifier hardware with phase input, neutral, and DC output terminals"
+      thumbnail: "/images/gallery/hardware/hust-vienna-rectifier-thumb.webp"
+      image: "/images/gallery/hardware/hust-vienna-rectifier.webp"
+      width: 1100
+      height: 901
+    - id: "hust-test-setup"
+      caption: "Test setup"
+      alt: "High-voltage Vienna rectifier test setup at HUST with an oscilloscope, controller, and laptop"
+      thumbnail: "/images/gallery/hardware/hust-test-setup-thumb.webp"
+      image: "/images/gallery/hardware/hust-test-setup.webp"
+      width: 733
+      height: 1100

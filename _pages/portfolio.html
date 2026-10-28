@@ -5,20 +5,32 @@ permalink: /gallery/
 author_profile: true
 ---
 
-<p class="gallery-intro">Conferences, research meetings, and hardware testing.</p>
+<div class="gallery-content">
+  <section aria-labelledby="hardware-projects-title">
+    <h2 class="gallery-section" id="hardware-projects-title">Hardware Projects</h2>
+    {% for project in site.data.hardware_gallery %}
+    {% assign project_loading = 'lazy' %}
+    {% if forloop.first %}{% assign project_loading = 'eager' %}{% endif %}
+    <section class="gallery-project" aria-labelledby="{{ project.id | escape }}-title">
+      <h3 class="gallery-project__title" id="{{ project.id | escape }}-title">{{ project.title | escape }}</h3>
+      <ul class="research-gallery research-gallery--hardware{% if project.photos.size == 1 %} research-gallery--single{% endif %}" role="list">
+        {% for photo in project.photos %}
+        <li>{% include gallery-card.html photo=photo project_title=project.title contain=true loading=project_loading %}</li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endfor %}
+  </section>
 
-<ul class="research-gallery" role="list">
-{% for photo in site.data.gallery %}
-  <li>
-    <figure class="gallery-card" id="{{ photo.id | escape }}">
-      <a class="gallery-card__link{% if photo.fit == 'contain' %} gallery-card__link--contain{% endif %}" href="{{ photo.image | relative_url }}" data-gallery-photo data-caption="{{ photo.caption | escape }}" data-alt="{{ photo.alt | escape }}" aria-label="View photo: {{ photo.caption | escape }}" style="--gallery-object-position: {{ photo.position | default: '50% 50%' | escape }};">
-        <img src="{{ photo.thumbnail | relative_url }}" alt="{{ photo.alt | escape }}" width="{{ photo.width }}" height="{{ photo.height }}" {% if forloop.index <= 2 %}loading="eager"{% else %}loading="lazy"{% endif %} decoding="async">
-      </a>
-      <figcaption>{{ photo.caption | escape }}</figcaption>
-    </figure>
-  </li>
-{% endfor %}
-</ul>
+  <section aria-labelledby="conference-gallery-title">
+    <h2 class="gallery-section gallery-section--events" id="conference-gallery-title">Conferences, Research Meetings, and Hardware Testing</h2>
+    <ul class="research-gallery" role="list">
+      {% for photo in site.data.gallery %}
+      <li>{% include gallery-card.html photo=photo %}</li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>
 
 <dialog class="gallery-viewer" id="gallery-viewer" aria-label="Photo viewer" aria-describedby="gallery-viewer-caption">
   <div class="gallery-viewer__toolbar">
