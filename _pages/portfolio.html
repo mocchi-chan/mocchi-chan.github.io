@@ -13,11 +13,28 @@ author_profile: true
     {% if forloop.first %}{% assign project_loading = 'eager' %}{% endif %}
     <section class="gallery-project" aria-labelledby="{{ project.id | escape }}-title">
       <h3 class="gallery-project__title" id="{{ project.id | escape }}-title">{{ project.title | escape }}</h3>
+      {% if project.note %}<p class="gallery-project__note">{{ project.note | escape }}</p>{% endif %}
+      {% if project.stack_title %}
+      <div class="gallery-project__stacked" role="group" aria-labelledby="{{ project.id | escape }}-stack-title">
+        <h4 class="gallery-stack__title" id="{{ project.id | escape }}-stack-title">{{ project.stack_title | escape }}</h4>
+        <div class="gallery-stack research-gallery--hardware">
+          {% for photo in project.photos limit:2 %}
+          {% include gallery-card.html photo=photo project_title=project.stack_title contain=true loading=project_loading show_caption=false %}
+          {% endfor %}
+        </div>
+        <ul class="research-gallery research-gallery--hardware research-gallery--scb-prototype" role="list">
+          {% for photo in project.photos offset:2 %}
+          <li>{% include gallery-card.html photo=photo project_title=project.title contain=true loading=project_loading %}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% else %}
       <ul class="research-gallery research-gallery--hardware{% if project.photos.size == 1 %} research-gallery--single{% endif %}" role="list">
         {% for photo in project.photos %}
         <li>{% include gallery-card.html photo=photo project_title=project.title contain=true loading=project_loading %}</li>
         {% endfor %}
       </ul>
+      {% endif %}
     </section>
     {% endfor %}
   </section>

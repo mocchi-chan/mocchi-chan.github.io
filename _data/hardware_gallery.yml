@@ -11,9 +11,10 @@
 
 - id: "scb-projects"
   title: "SCB Projects"
+  stack_title: "Power stage of a 120A 24V-to-1V SC-ZB-TLVR prototype"
   photos:
     - id: "scb-power-stage"
-      caption: "Power stage"
+      caption: "Top and bottom views"
       alt: "Top and bottom views of the series-capacitor buck power stage with component and dimension labels"
       thumbnail: "/images/gallery/hardware/scb-power-stage-thumb.webp"
       image: "/images/gallery/hardware/scb-power-stage.webp"
@@ -36,6 +37,7 @@
 
 - id: "vrm-projects"
   title: "High-Density Voltage Regulator Module (VRM) Projects"
+  note: "Collaborated with Huaqiao Liu, advised by Prof. Yenan Chen, Zhejiang University."
   photos:
     - id: "vrm-3d-rendering"
       caption: "3D rendering of the 240-A hybrid switched-capacitor VRM"
@@ -54,6 +56,7 @@
 
 - id: "hust-high-voltage"
   title: "High-Voltage Project at HUST"
+  note: "Mentored by Dr. Hui Liu, advised by Prof. Dong Jiang, Huazhong University of Science and Technology."
   photos:
     - id: "hust-vienna-rectifier"
       caption: "3-phase Vienna rectifier for electric vehicle (EV) applications"
