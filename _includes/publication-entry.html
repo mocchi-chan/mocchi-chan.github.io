@@ -12,8 +12,11 @@
   {% if include.show_title != false %}
   <h3 class="publication-title">{% if publication.links == false %}{{ publication.title | escape }}{% else %}<a href="{{ title_url | escape }}">{{ publication.title | escape }}</a>{% endif %}</h3>
   {% endif %}
-  <p class="publication-authors">{% for author in publication.authors %}{% unless forloop.first %}, {% endunless %}{% if author == site.author.name %}<strong>{{ author | escape }}</strong>{% else %}{{ author | escape }}{% endif %}{% endfor %}</p>
-  <p class="publication-venue"><em>{{ publication.venue | escape }}</em>{% if publication.volume %}, vol. {{ publication.volume }}, no. {{ publication.issue }}{% endif %}, pp. {{ publication.pages | replace: '-', '–' }}, {{ publication.year }}.</p>
+  <p class="publication-authors">{% for author in publication.authors %}{% unless forloop.first %}, {% endunless %}{% if forloop.index == publication.author_position %}<strong>{{ author | escape }}</strong>{% else %}{{ author | escape }}{% endif %}{% endfor %}</p>
+  <p class="publication-venue"><em>{{ publication.venue | escape }}</em>{% if publication.volume %}, vol. {{ publication.volume }}, no. {{ publication.issue }}{% endif %}{% if publication.pages %}, pp. {{ publication.pages | replace: '-', '–' }}{% endif %}, {{ publication.year }}.</p>
+  {% if publication.status %}
+  <p class="publication-note"><em>{{ publication.status | escape }}.</em></p>
+  {% endif %}
   {% if publication.early_access_year %}
   <p class="publication-note">Early access: {{ publication.early_access_year }}.</p>
   {% endif %}

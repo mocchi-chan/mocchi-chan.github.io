@@ -1,0 +1,44 @@
+- title: "Analytical Model and Design Considerations of High-Pass Filtered AC Load Line Control for Multiphase Point-of-Load Converters"
+  category: conferences
+  authors:
+    - "S. Zhang"
+    - "Y. Elasser"
+    - "S. Kudva"
+    - "R. Abramson"
+    - "C. Lee"
+    - "T. Gray"
+    - "R. C. N. Pilawa-Podgurski"
+  author_position: 1
+  venue: "IEEE Applied Power Electronics Conference and Exposition (APEC)"
+  year: 2027
+  status: "To be published"
+  links: false
+
+- title: "Design and Performance Optimization of a 7,900-W/in³ Switching-Bus Interleaved Doubler (SID) Converter for 48-V-to-12-V Fixed-Ratio Resonant Conversion"
+  category: conferences
+  authors:
+    - "N. Patle"
+    - "H. Sambo"
+    - "S. Zhang"
+    - "R. C. N. Pilawa-Podgurski"
+  author_position: 3
+  venue: "IEEE Applied Power Electronics Conference and Exposition (APEC)"
+  year: 2027
+  status: "To be published"
+  links: false
+
+- title: "A Symmetric Quad-Inductor Hybrid Dickson DC-DC Converter for Direct 48-V-to-PoL Power Delivery"
+  category: conferences
+  authors:
+    - "J. Huang"
+    - "N. Patle"
+    - "E. Krause"
+    - "S. Zhang"
+    - "Y. Zhu"
+    - "Y. Lu"
+    - "R. C. N. Pilawa-Podgurski"
+  author_position: 4
+  venue: "IEEE Applied Power Electronics Conference and Exposition (APEC)"
+  year: 2027
+  status: "To be published"
+  links: false

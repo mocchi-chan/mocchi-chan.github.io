@@ -33,6 +33,11 @@ conference_order:
     {% assign other_conferences = category_publications | where_exp: 'publication', 'publication.author_position != 1' %}
     {% assign category_publications = first_author_conferences | concat: other_conferences %}
   {% endif %}
+  {% assign forthcoming_publications = site.data.forthcoming_publications | where: 'category', category[0] %}
+  {% assign first_author_forthcoming = forthcoming_publications | where: 'author_position', 1 %}
+  {% assign other_forthcoming = forthcoming_publications | where_exp: 'publication', 'publication.author_position != 1' %}
+  {% assign forthcoming_publications = first_author_forthcoming | concat: other_forthcoming %}
+  {% assign category_publications = forthcoming_publications | concat: category_publications %}
   {% if category_publications.size > 0 %}
     <h2 class="publication-section">{{ category[1].title }}</h2>
     <ol class="publication-list" role="list">
