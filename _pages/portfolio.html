@@ -5,14 +5,32 @@ permalink: /gallery/
 author_profile: true
 ---
 
-{% include base_path %}
+<p class="gallery-intro">Conferences, research meetings, and hardware testing.</p>
 
-
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
+<ul class="research-gallery" role="list">
+{% for photo in site.data.gallery %}
+  <li>
+    <figure class="gallery-card" id="{{ photo.id | escape }}">
+      <a class="gallery-card__link{% if photo.fit == 'contain' %} gallery-card__link--contain{% endif %}" href="{{ photo.image | relative_url }}" data-gallery-photo data-caption="{{ photo.caption | escape }}" data-alt="{{ photo.alt | escape }}" aria-label="View photo: {{ photo.caption | escape }}" style="--gallery-object-position: {{ photo.position | default: '50% 50%' | escape }};">
+        <img src="{{ photo.thumbnail | relative_url }}" alt="{{ photo.alt | escape }}" width="{{ photo.width }}" height="{{ photo.height }}" {% if forloop.index <= 2 %}loading="eager"{% else %}loading="lazy"{% endif %} decoding="async">
+      </a>
+      <figcaption>{{ photo.caption | escape }}</figcaption>
+    </figure>
+  </li>
 {% endfor %}
+</ul>
 
+<dialog class="gallery-viewer" id="gallery-viewer" aria-label="Photo viewer" aria-describedby="gallery-viewer-caption">
+  <div class="gallery-viewer__toolbar">
+    <span id="gallery-viewer-counter" aria-live="polite"></span>
+    <button type="button" id="gallery-viewer-close" autofocus>Close <span aria-hidden="true">×</span></button>
+  </div>
+  <img class="gallery-viewer__image" id="gallery-viewer-image" alt="">
+  <p class="gallery-viewer__caption" id="gallery-viewer-caption" aria-live="polite"></p>
+  <div class="gallery-viewer__navigation">
+    <button type="button" id="gallery-viewer-previous" aria-label="Previous photo">← Previous</button>
+    <button type="button" id="gallery-viewer-next" aria-label="Next photo">Next →</button>
+  </div>
+</dialog>
 
-{% if site.portfolio.size == 0 %}
-<p>No photos have been added yet.</p>
-{% endif %}
+<script src="{{ '/assets/js/gallery.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>

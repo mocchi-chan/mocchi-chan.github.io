@@ -1,0 +1,53 @@
+- id: "ocp-summit"
+  thumbnail: "/images/gallery/ocp-summit-thumb.jpg"
+  image: "/images/gallery/ocp-summit.jpg"
+  caption: "At the OCP Summit"
+  alt: "Shuyu Zhang beside the TLVR research poster at the OCP Summit"
+  width: 1000
+  height: 750
+  position: "50% 50%"
+
+- id: "apec-2026-oral"
+  thumbnail: "/images/gallery/apec-2026-oral-thumb.jpg"
+  image: "/images/gallery/apec-2026-oral.jpg"
+  caption: "Presenting our TLVR work at APEC 2026 — Oral presentation"
+  alt: "Shuyu Zhang at the lectern with the TLVR presentation title slide at APEC 2026"
+  width: 1000
+  height: 563
+  fit: "contain"
+
+- id: "apec-2026-poster"
+  thumbnail: "/images/gallery/apec-2026-poster-thumb.jpg"
+  image: "/images/gallery/apec-2026-poster.jpg"
+  caption: "Presenting our TLVR work at APEC 2026 — Poster presentation"
+  alt: "Shuyu Zhang discussing the series-capacitor zero-bias TLVR poster with attendees at APEC 2026"
+  width: 750
+  height: 1000
+  position: "50% 60%"
+
+- id: "bpec-annual-meeting"
+  thumbnail: "/images/gallery/bpec-annual-meeting-thumb.jpg"
+  image: "/images/gallery/bpec-annual-meeting.jpg"
+  caption: "At the BPEC annual meeting"
+  alt: "Shuyu Zhang beside the Berkeley Power and Energy Center banner at the annual meeting"
+  width: 1000
+  height: 667
+  position: "50% 45%"
+
+- id: "apec-2024-vrm"
+  thumbnail: "/images/gallery/apec-2024-vrm-thumb.jpg"
+  image: "/images/gallery/apec-2024-vrm.jpg"
+  caption: "Presenting our VRM work at APEC 2024"
+  alt: "Shuyu Zhang beside the hybrid switched-capacitor VRM presentation title slide at APEC 2024"
+  width: 1000
+  height: 667
+  position: "50% 50%"
+
+- id: "hardware-testing"
+  thumbnail: "/images/gallery/hardware-testing-thumb.jpg"
+  image: "/images/gallery/hardware-testing.jpg"
+  caption: "Working in the lab on hardware testing"
+  alt: "Shuyu Zhang at a lab bench with power supplies, an oscilloscope, and hardware under test"
+  width: 1000
+  height: 667
+  position: "50% 50%"

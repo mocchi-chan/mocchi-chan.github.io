@@ -1,0 +1,131 @@
+.gallery-intro {
+  margin-bottom: 1.25rem;
+}
+
+.research-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.3rem 1rem;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  list-style: none;
+
+  > li {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.gallery-card {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+
+  .gallery-card__link {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    border-radius: 4px;
+    background: var(--global-footer-bg-color);
+
+    &:focus-visible {
+      outline: 3px solid var(--global-link-color);
+      outline-offset: 3px;
+    }
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    object-fit: cover;
+    object-position: var(--gallery-object-position, 50% 50%);
+  }
+
+  .gallery-card__link--contain img {
+    object-fit: contain;
+  }
+
+  figcaption {
+    margin: 0.55rem 0 0;
+    color: var(--global-text-color);
+    font-size: 0.8em;
+    line-height: 1.5;
+  }
+}
+
+body.gallery-viewer-open {
+  overflow: hidden;
+}
+
+.gallery-viewer {
+  width: min(1100px, calc(100vw - 2rem));
+  max-width: calc(100vw - 2rem);
+  max-height: calc(100dvh - 2rem);
+  margin: auto;
+  padding: 1rem;
+  overflow: auto;
+  border: 1px solid var(--global-border-color);
+  border-radius: 6px;
+  background: var(--global-bg-color);
+  color: var(--global-text-color);
+
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.82);
+  }
+
+  button {
+    padding: 0.35rem 0.65rem;
+    border: 1px solid var(--global-border-color);
+    border-radius: 4px;
+    background: var(--global-footer-bg-color);
+    color: inherit;
+    font: inherit;
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+}
+
+.gallery-viewer__toolbar,
+.gallery-viewer__navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.gallery-viewer__toolbar {
+  margin-bottom: 0.75rem;
+  font-size: 0.8rem;
+}
+
+.gallery-viewer__image {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: calc(100dvh - 12rem);
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.gallery-viewer__caption {
+  margin: 0.75rem 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 40em) {
+  .research-gallery {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.1rem;
+  }
+
+  .gallery-viewer {
+    padding: 0.75rem;
+  }
+}
