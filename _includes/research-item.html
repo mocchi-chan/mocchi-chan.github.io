@@ -1,0 +1,28 @@
+{% assign research_item = include.item %}
+{% assign research_publication = nil %}
+{% assign research_paper_url = "" %}
+{% if research_item.publication_permalink %}
+  {% assign research_publication = site.publications | where: 'permalink', research_item.publication_permalink | first %}
+  {% assign research_paper_url = research_publication.paperurl | default: research_publication.publisher_url %}
+  {% if research_publication.local_pdf %}
+    {% assign research_local_pdf = site.static_files | where: 'path', research_publication.local_pdf | first %}
+    {% if research_local_pdf %}{% assign research_paper_url = research_local_pdf.path | relative_url %}{% endif %}
+  {% endif %}
+{% endif %}
+
+<article class="research-item{% if research_item.featured %} research-item--featured{% endif %}" id="{{ research_item.id }}">
+  <div class="research-item__media">
+    {% for research_media in research_item.images %}
+      {% include research-image.html image=research_media %}
+    {% endfor %}
+  </div>
+  <div class="research-item__body">
+    <h3 class="research-item__title">{% if research_paper_url != "" %}<a href="{{ research_paper_url | escape }}">{{ research_item.title | escape }}</a>{% else %}{{ research_item.title | escape }}{% endif %}</h3>
+    {% if research_publication %}
+    <p class="research-item__authors">{% for author in research_publication.authors %}{% unless forloop.first %}, {% endunless %}{% if author == site.author.name %}<strong>{{ author | escape }}</strong>{% else %}{{ author | escape }}{% endif %}{% endfor %}</p>
+    <p class="research-item__venue">IEEE APEC {{ research_publication.year }}</p>
+    <p class="research-item__links"><a href="{{ research_paper_url | escape }}">[Paper]</a><a href="https://doi.org/{{ research_publication.doi | escape }}">[DOI]</a></p>
+    {% endif %}
+    <p class="research-item__description">{{ research_item.description | escape }}</p>
+  </div>
+</article>

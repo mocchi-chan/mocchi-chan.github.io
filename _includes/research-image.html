@@ -1,0 +1,14 @@
+{% assign research_image = include.image %}
+{% assign research_image_file = site.static_files | where: 'path', research_image.path | first %}
+<figure class="research-image">
+  {% if research_image_file %}
+  <a class="research-image__link" href="{{ research_image.path | relative_url }}" aria-label="View full-size image: {{ research_image.alt | escape }}">
+    <img src="{{ research_image.path | relative_url }}" alt="{{ research_image.alt | escape }}" loading="lazy" decoding="async">
+  </a>
+  {% else %}
+  <div class="research-image__placeholder" role="img" aria-label="{{ research_image.alt | escape }}">
+    <span>{{ research_image.placeholder | default: 'Image coming soon' }}</span>
+  </div>
+  {% endif %}
+  {% if research_image.caption %}<figcaption>{{ research_image.caption | escape }}</figcaption>{% endif %}
+</figure>

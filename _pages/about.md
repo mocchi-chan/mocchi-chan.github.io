@@ -2,6 +2,7 @@
 permalink: /
 title: ""
 author_profile: true
+home_feed: true
 redirect_from:
   - /about/
   - /about.html
@@ -17,52 +18,8 @@ My research focuses on **high-performance power delivery for AI infrastructure**
 
 ## Research Highlights
 
-<div class="research-highlights">
-
-  <article class="research-card">
-    {% assign research_image = site.static_files | where: 'path', '/images/research/tlvr-highlight.jpg' | first %}
-    {% if research_image %}
-    <img
-      src="{{ '/images/research/tlvr-highlight.jpg' | relative_url }}"
-      alt="Fast-transient trans-inductor voltage regulator research"
-      loading="lazy"
-      decoding="async"
-    >
-    {% endif %}
-    <div class="research-card__body">
-      <h3>Fast-Transient Control of Trans-Inductor Voltage Regulators</h3>
-      <p>
-        Modeling, control, and hardware implementation of multiphase TLVRs,
-        including compensation-winding-current-based control and
-        series-capacitor zero-bias magnetics.
-      </p>
-      <p class="research-card__meta">
-        IEEE APEC 2026
-      </p>
-    </div>
-  </article>
-
-  <article class="research-card">
-    {% assign research_image = site.static_files | where: 'path', '/images/research/acll-highlight.jpg' | first %}
-    {% if research_image %}
-    <img
-      src="{{ '/images/research/acll-highlight.jpg' | relative_url }}"
-      alt="AC load-line control for multiphase point-of-load converters"
-      loading="lazy"
-      decoding="async"
-    >
-    {% endif %}
-    <div class="research-card__body">
-      <h3>AC Load-Line Control for AI Processor Power Delivery</h3>
-      <p>
-        Analytical modeling and design of high-pass-filtered AC load-line
-        control for fast-transient multiphase point-of-load converters,
-        targeting reduced peak current and improved transient performance.
-      </p>
-      <p class="research-card__meta">
-        NVIDIA Research Internship · IEEE APEC 2027
-      </p>
-    </div>
-  </article>
-
+<div class="research-feed">
+{% for item in site.data.research %}
+  {% include research-item.html item=item %}
+{% endfor %}
 </div>

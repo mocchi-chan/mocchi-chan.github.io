@@ -1,0 +1,51 @@
+- id: tlvr-control
+  title: "Fast-Transient Control of Trans-Inductor Voltage Regulators"
+  featured: true
+  publication_permalink: /publication/apec-tlvr-cot-control/
+  description: >-
+    A single compensation-winding current sensor replaces per-phase high-bandwidth
+    sensing in constant-on-time TLVR control. Modeling and a six-phase hardware
+    prototype demonstrate fast load-transient response with simpler sensing and
+    routing for processor power delivery.
+  images:
+    - path: /images/research/tlvr-prototype.png
+      alt: "Six-phase TLVR hardware prototype with control circuitry and an on-board load stepper"
+      caption: "TLVR prototype · APEC 2026"
+    - path: /images/research/tlvr-control-fig3.png
+      alt: "Conventional per-phase current sensing and proposed compensation-winding-current-based TLVR control"
+      caption: "Conventional and proposed control · Fig. 3"
+
+- id: single-sensor-zb-tlvr
+  title: "Single-current-sensor series-capacitor buck converter with ZB-TLVR"
+  featured: true
+  publication_permalink: /publication/apec-series-capacitor-zero-bias-tlvr/
+  description: >-
+    A series-capacitor buck architecture with coupled magnetics reduces DC flux
+    bias and improves transient response. The work develops single-current-sensor
+    control and phase-shift modulation for current balancing, with a compact
+    24-V-to-1-V hardware prototype.
+  images:
+    - path: /images/research/sc-zb-tlvr-fig9.png
+      alt: "Top and bottom views of the four-phase series-capacitor zero-bias TLVR prototype"
+      caption: "Hardware prototype · APEC 2026, Fig. 9"
+
+- id: data-center-design
+  title: "High-performance design methodologies for 48V data center power delivery"
+  publication_permalink: /publication/apec-hsc-vrm-zvs/
+  description: >-
+    Scalable hybrid switched-capacitor topologies for data-center power delivery,
+    with zero-voltage-switching intermediate rails and reusable buck-stage
+    components. The paper develops the operating principles and validates the
+    design using a 12-V-to-1-V, 1-MHz prototype.
+  images:
+    - path: /images/research/hsc-vrm-prototype.png
+      alt: "Hybrid switched-capacitor VRM prototype with labeled input, output, and MCU connections"
+      caption: "12-V-to-1-V HSC-VRM prototype · APEC 2024, Fig. 10"
+
+- id: intermediate-bus-converter
+  title: "High-density 48V intermediate bus converter"
+  description: "Coming soon."
+  images:
+    - path: /images/research/ibc-preview.png
+      alt: "High-density 48V intermediate bus converter preview"
+      placeholder: "Image coming soon"
