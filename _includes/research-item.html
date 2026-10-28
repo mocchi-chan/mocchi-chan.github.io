@@ -11,7 +11,7 @@
 {% endif %}
 
 <article class="research-item{% if research_item.featured %} research-item--featured{% endif %}" id="{{ research_item.id }}">
-  <div class="research-item__media">
+  <div class="research-item__media{% if research_item.images.size > 1 %} research-item__media--stacked{% endif %}">
     {% for research_media in research_item.images %}
       {% include research-image.html image=research_media %}
     {% endfor %}

@@ -3,7 +3,7 @@
 <figure class="research-image">
   {% if research_image_file %}
   <a class="research-image__link" href="{{ research_image.path | relative_url }}" aria-label="View full-size image: {{ research_image.alt | escape }}">
-    <img src="{{ research_image.path | relative_url }}" alt="{{ research_image.alt | escape }}" loading="lazy" decoding="async">
+    <img src="{{ research_image.path | relative_url }}" alt="{{ research_image.alt | escape }}" width="220" loading="lazy" decoding="async">
   </a>
   {% else %}
   <div class="research-image__placeholder" role="img" aria-label="{{ research_image.alt | escape }}">
