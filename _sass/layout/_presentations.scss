@@ -18,6 +18,7 @@
 
 .presentation-event__title {
   margin: 0 0 0.35rem;
+  color: var(--presentation-accent-color);
   font-size: 1.05em;
   line-height: 1.4;
 }
@@ -26,31 +27,6 @@
   margin: 0 0 0.4rem;
   font-size: 0.8em;
   line-height: 1.5;
-}
-
-.presentation-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.presentation-entry {
-  margin: 0;
-  padding: 0.7rem 0 0.25rem;
-}
-
-.presentation-entry__type {
-  margin: 0 0 0.25rem;
-  font-size: 0.78em;
-  font-style: italic;
-  line-height: 1.5;
-}
-
-.presentation-entry__title {
-  margin: 0;
-  color: var(--presentation-accent-color);
-  font-size: 0.95em;
-  line-height: 1.45;
 }
 
 html[data-theme="dark"] .presentations {

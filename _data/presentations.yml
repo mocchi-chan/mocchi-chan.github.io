@@ -3,35 +3,21 @@
   date: "2026-10"
   date_label: "October 2026"
   location: "San Jose, CA"
-  presentations:
-    - type: "Poster presentation"
-      title: "iLc-Based Control: Exploring Improved Control Techniques for Fast-Transient Trans-Inductor Voltage Regulators"
 
 - id: apec-2026
   event: "2026 IEEE Applied Power Electronics Conference and Exposition (APEC)"
   date: "2026-03"
   date_label: "March 2026"
   location: "San Antonio, TX"
-  presentations:
-    - type: "Oral presentation"
-      title: "Compensation-Winding-Current-Based Constant On-Time Control of Trans-Inductor Voltage Regulators (TLVRs)"
-    - type: "Poster presentation"
-      title: "Analysis and Implementation of a Series-Capacitor Zero-Bias Trans-Inductor Voltage Regulator"
 
 - id: apec-2024
   event: "2024 IEEE Applied Power Electronics Conference and Exposition (APEC)"
   date: "2024-02"
   date_label: "February 2024"
   location: "Long Beach, CA"
-  presentations:
-    - type: "Oral presentation"
-      title: "Hybrid-Switched-Capacitor VRM with Zero-Voltage-Switching Intermediate Voltage Rails"
 
 - id: ecce-2023
   event: "2023 IEEE Energy Conversion Congress and Exposition (ECCE)"
   date: "2023-10"
   date_label: "October 2023"
   location: "Nashville, TN"
-  presentations:
-    - type: "Poster presentation"
-      title: "Hybrid-Switched-Capacitor VRM with Multifunctional Components"
