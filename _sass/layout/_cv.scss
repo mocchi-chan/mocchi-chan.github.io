@@ -9,25 +9,6 @@
   }
 }
 
-.cv-preview {
-  figure {
-    margin: 0 0 1.25rem;
-  }
-
-  a {
-    display: block;
-  }
-
-  img {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border: 1px solid var(--global-border-color);
-    background: #fff;
-  }
-}
-
 html[data-theme="dark"] .cv-download a {
   color: #9fd1ff;
 }
