@@ -1,7 +1,7 @@
 locale: "en-US"
 site_theme: "default"
 
-title: "Shuyu Zhang"
+title: "Shuyu Zhang | UC Berkeley"
 title_separator: "-"
 name: &name "Shuyu Zhang"
 description: &description "High-performance power delivery for AI infrastructure"
