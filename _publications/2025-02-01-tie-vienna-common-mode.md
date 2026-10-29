@@ -17,7 +17,6 @@ venue: "IEEE Transactions on Industrial Electronics"
 pages: "1148-1158"
 doi: "10.1109/tie.2024.3423368"
 publisher_url: "https://ieeexplore.ieee.org/abstract/document/10613016/"
-scholar_url: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rHK_wkAAAAAJ&pagesize=100&citation_for_view=rHK_wkAAAAAJ:qjMakFHDy7sC"
 volume: "72"
 issue: "2"
 early_access_year: 2024

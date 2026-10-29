@@ -49,10 +49,18 @@
     - id: "vrm-hardware-prototype"
       caption: "Hardware prototype"
       alt: "Hybrid switched-capacitor voltage regulator module hardware prototype with inductors and power terminals"
-      thumbnail: "/images/gallery/hardware/vrm-hardware-prototype-thumb.webp"
-      image: "/images/gallery/hardware/vrm-hardware-prototype.webp"
+      thumbnail: "/images/gallery/hardware/vrm-hardware-prototype-corrected-thumb.webp"
+      image: "/images/gallery/hardware/vrm-hardware-prototype-corrected.webp"
       width: 1100
       height: 733
+    - id: "vrm-12v-prototype"
+      caption: "12-V-to-1-V, 80-A HSC-VRM prototype (APEC 2024)"
+      alt: "Annotated 12-V-to-1-V, 80-A hybrid switched-capacitor voltage regulator prototype from Fig. 10 of the APEC 2024 paper"
+      thumbnail: "/images/gallery/hardware/vrm-12v-prototype-thumb.webp"
+      image: "/images/gallery/hardware/vrm-12v-prototype.webp"
+      width: 1100
+      height: 696
+      full_row: true
 
 - id: "hust-high-voltage"
   title: "High-Voltage Project at HUST"
@@ -61,8 +69,8 @@
     - id: "hust-vienna-rectifier"
       caption: "3-phase Vienna rectifier for electric vehicle (EV) applications"
       alt: "Three-phase Vienna rectifier hardware with phase input, neutral, and DC output terminals"
-      thumbnail: "/images/gallery/hardware/hust-vienna-rectifier-thumb.webp"
-      image: "/images/gallery/hardware/hust-vienna-rectifier.webp"
+      thumbnail: "/images/gallery/hardware/hust-vienna-rectifier-corrected-thumb.webp"
+      image: "/images/gallery/hardware/hust-vienna-rectifier-corrected.webp"
       width: 1100
       height: 901
     - id: "hust-test-setup"

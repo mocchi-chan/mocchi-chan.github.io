@@ -16,7 +16,6 @@ venue: "IEEE Applied Power Electronics Conference and Exposition (APEC)"
 pages: "2090-2096"
 doi: "10.1109/apec51134.2026.11516874"
 publisher_url: "https://ieeexplore.ieee.org/abstract/document/11516874/"
-scholar_url: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rHK_wkAAAAAJ&pagesize=100&citation_for_view=rHK_wkAAAAAJ:zYLM7Y9cAGgC"
 paperurl: "https://escholarship.org/content/qt8pc7b8t4/qt8pc7b8t4.pdf?v=lg"
 ---
 

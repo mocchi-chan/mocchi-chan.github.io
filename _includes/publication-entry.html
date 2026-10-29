@@ -23,8 +23,7 @@
   {% if publication.links != false %}
   <p class="publication-links">
     {% if fulltext_url != "" %}<a href="{{ fulltext_url | escape }}">Paper (PDF)</a>{% endif %}
-    <a href="https://doi.org/{{ publication.doi | escape }}">DOI</a>
-    <a href="{{ publication.scholar_url | escape }}">Google Scholar</a>
+    {% if publication.doi %}<a href="https://doi.org/{{ publication.doi | escape }}">DOI</a>{% endif %}
   </p>
   {% endif %}
 </div>

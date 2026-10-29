@@ -16,8 +16,8 @@ author_position: 5
 venue: "11th International Conference on Power Electronics and ECCE Asia (ICPE 2023 - ECCE Asia)"
 pages: "2649-2654"
 doi: "10.23919/icpe2023-ecceasia54778.2023.10213508"
+paperurl: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10213508"
 publisher_url: "https://ieeexplore.ieee.org/abstract/document/10213508/"
-scholar_url: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rHK_wkAAAAAJ&pagesize=100&citation_for_view=rHK_wkAAAAAJ:u-x6o8ySG0sC"
 ---
 
 {% include publication-entry.html publication=page show_title=false %}

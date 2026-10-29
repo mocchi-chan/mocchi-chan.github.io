@@ -16,9 +16,9 @@ author_position: 3
 venue: "IEEE 2nd International Power Electronics and Application Symposium (PEAS)"
 pages: "1742-1745"
 doi: "10.1109/peas58692.2023.10395704"
+paperurl: "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10395704"
 publisher_url: "https://ieeexplore.ieee.org/abstract/document/10395704/"
-scholar_url: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rHK_wkAAAAAJ&pagesize=100&citation_for_view=rHK_wkAAAAAJ:d1gkVwhDpl0C"
-links: false
+links: true
 ---
 
 {% include publication-entry.html publication=page show_title=false %}

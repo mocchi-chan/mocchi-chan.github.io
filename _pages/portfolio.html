@@ -3,6 +3,7 @@ layout: archive
 title: "Gallery"
 permalink: /gallery/
 author_profile: true
+berkeley_headings: true
 ---
 
 <div class="gallery-content">
@@ -31,7 +32,7 @@ author_profile: true
       {% else %}
       <ul class="research-gallery research-gallery--hardware{% if project.photos.size == 1 %} research-gallery--single{% endif %}" role="list">
         {% for photo in project.photos %}
-        <li>{% include gallery-card.html photo=photo project_title=project.title contain=true loading=project_loading %}</li>
+        <li{% if photo.full_row %} class="research-gallery__item--full-row"{% endif %}>{% include gallery-card.html photo=photo project_title=project.title contain=true loading=project_loading %}</li>
         {% endfor %}
       </ul>
       {% endif %}

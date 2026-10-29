@@ -123,6 +123,24 @@
 
 .research-gallery--scb-prototype {
   grid-template-columns: minmax(0, 1fr);
+
+  .gallery-card__link {
+    width: 80%;
+  }
+}
+
+.research-gallery > .research-gallery__item--full-row {
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: 520px;
+
+  .gallery-card__link {
+    aspect-ratio: auto;
+  }
+
+  img {
+    height: auto;
+  }
 }
 
 .gallery-stack,
