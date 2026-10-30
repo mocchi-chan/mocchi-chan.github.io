@@ -42,10 +42,3 @@
     - path: /images/research/hsc-vrm-prototype.png
       alt: "Hybrid switched-capacitor VRM prototype with labeled input, output, and MCU connections"
       caption: "12-V-to-1-V HSC-VRM prototype · APEC 2024, Fig. 10"
-
-- id: intermediate-bus-converter
-  title: "High-density 48V intermediate bus converter"
-  description: "Coming soon."
-  images:
-    - path: /images/research/ibc-prototype.png
-      alt: "High-density 48V intermediate bus converter hardware prototype"
