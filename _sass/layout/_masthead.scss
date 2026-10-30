@@ -3,6 +3,13 @@
    ========================================================================== */
 
 .masthead {
+  /* Scope the Berkeley navigation palette to the header in both themes. */
+  --global-bg-color: #002676;
+  --global-text-color: #fff;
+  --global-masthead-link-color: #fff;
+  --global-masthead-link-color-hover: #fff;
+  --global-border-color: rgba(255, 255, 255, 0.25);
+
   position: fixed;
   background: var(--global-bg-color);
   height: fit-content;
@@ -40,6 +47,12 @@
 
     a {
       text-decoration: none;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 3px;
     }
   }
 }
